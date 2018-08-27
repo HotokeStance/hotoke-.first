@@ -1,70 +1,118 @@
-
 /*---------------------------------共通レイアウト------------------------------*/
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
-form,fieldset,input,textarea,p,blockquote,th,td {
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
     padding: 0;
     margin: 0;
 }
 
-body{
-    font-family: 'arial black','arial unicode ms'
+body {
+    font-family: 'arial black', 'Alegreya Sans SC', sans-serif;
 }
 
-li{
+@media (max-width: 736px) {
+    body {
+        width: 100%;
+    }
+}
+
+
+
+li {
     list-style: none;
 }
 
 
-a{
- text-decoration: none;
+a {
+    text-decoration: none;
 }
 
 /*---------------------------------終わり:共通レイアウト------------------------------*/
 
 /*---------------------------------ヘッダー------------------------------*/
-#header, #footer{
-    position:fixed;
-    height: 50px;
-    display:block;
+
+#header,
+#footer {
+    position: fixed;
+    height: 68px;
+    display: block;
     width: 100%;
     background: #333;
-    z-index:9;
-    text-align:center;
+    z-index: 9;
+    text-align: center;
     color: #f2f2f2;
     padding: 20px 0 0 0;
 }
 
-#header{
+#header {
     top: 0px;
 }
 
-#footer{
+#footer {
     bottom: 0px;
+}
+
+@media (max-width: 736px) {
+    #header,
+    #footer {
+        text-align: center;
+    }
+    #header {
+        height: 10vh;
+    }
+    #footer {
+        height: 10vh;
+    }
 }
 
 /*---------------------------------終わり:ヘッダー------------------------------*/
 
 /*---------------------------------アンカー------------------------------*/
-#menu{
-    position: fixed;
-    top:0;
-	left:0;
-	height: 40px;
-	z-index: 70;
-	width: 100%;
-	padding: 0;
-	margin:0;
 
+#menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 40px;
+    z-index: 70;
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
-#menu li{
+#menu li {
     display: inline-block;
     margin-top: 15px;
     background-color: rgb(255, 255, 255);
     border-radius: 20px;
 }
 
-#menu a{
+#menu a {
     display: block;
     font-weight: bold;
     color: black;
@@ -72,111 +120,308 @@ a{
     letter-spacing: 2px;
 }
 
+@media (max-width: 736px) {
+    #menu a {
+        padding: 2px 10px;
+    }
+}
+
 /*---------------------------------終わり:アンカー------------------------------*/
 
-
 /*---------------------------------1-1枚目-左側-----------------------------------*/
+
 .back1-left-section {
     position: absolute;
-    top:30%;
+    top: 30%;
     margin-left: 10%;
 }
 
-.back1-left-section h1{
+.back1-left-section h1 {
     font-size: 4em;
 }
 
-.back1-left-section p{
+.back1-left-section p {
     font-size: 1.2em;
+}
+
+@media (max-width: 736px) {
+    .back1-left-section {
+        position: absolute;
+        top: 14%;
+    }
+
+    .back1-left-section h1 {
+        font-size: 30px;
+    }
+    .back1-left-section p {
+        font-size: 20px;
+    }
 }
 
 /*---------------------------------終わり:1枚目-左側------------------------------*/
 
-
 /*---------------------------------1-1枚目-右側------------------------------------*/
 
-.back1-right-section{
+.back1-right-section {
     position: absolute;
     top: 30%;
     margin-left: 30%
 }
 
-.back1-right-section ul{
+.back1-right-section ul {
     width: 130%;
     margin-bottom: 10%;
 }
 
-.back1-right-section h2{
-    font-size:3em;
+.back1-right-section h2 {
+    font-size: 3em;
 }
 
-.back1-right-section li{
+.back1-right-section li {
     padding-top: 2%;
     padding-left: 15%;
-    font-size:1.6em;
+    font-size: 1.6em;
 }
-/*---------------------------------終わり:1枚目-右側------------------------------*/
 
+@media (max-width: 736px) {
+    .back1-right-section {
+        position: absolute;
+        top: 20%;
+        margin-left: 10%
+    }
+
+    .back1-right-section h2 {
+        font-size: 30px;
+    }
+    .back1-right-section li {
+        padding-right: 5%;
+        font-size: 15px;
+    }
+}
+
+/*---------------------------------終わり:1枚目-右側------------------------------*/
 
 /*---------------------------------2-2枚目-左側------------------------------*/
 
-.back2-left-section{
+.back2-left-section {
     position: absolute;
-    top:10%;
+    top: 10%;
     left: 2%;
 }
 
 /*-----リスト------*/
-.list-app{
+
+.list-app {
     position: relative;
     width: 240px;
     height: 150px;
 }
 
 
-.list-app img{
+.list-app img {
     width: 240px;
     height: auto;
 }
 
-.list-app .caption{
+.list-app .caption {
     font-size: 120%;
-	color: #fff;
-	padding-top: 70px;
-	padding-left: 78px;
+    color: #fff;
+    padding-top: 70px;
+    padding-left: 78px;
 }
 
-.list-app .mask{
+.list-app .mask {
     width: 100%;
-	height:	100%;
-	position:absolute;
-	top: 0;
-	left: 0;
-	background-color: rgba(0,0,0,0.4);
-	-webkit-transition:	all 0.4s ease;
-	transition:	all 0.4s ease;
-	-webkit-transform: scale(0);	/* 大きさを０にして表示しない */
-	transform: scale(0);
+    height: 100%;
+    position: absolute;
+    /*親要素にrelativeがあるのでtop:0,left:0*/
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    -webkit-transform: scale(0);
+    /* 大きさを０にして表示しない */
+    transform: scale(0);
 }
 
-.list-app:hover .mask{
+.list-app:hover .mask {
     cursor: pointer;
-    -webkit-transform: scale(1);	/* 大きさを１にして表示する */
-	transform: scale(1);
+    -webkit-transform: scale(1);
+    /* 大きさを１にして表示する */
+    transform: scale(1);
 }
 
-.list-app{
-	transform: scale(0, 0) rotateY(180deg);
-	-webkit-transform: scale(0, 0) rotateY(180deg);
+@media (max-width: 736px) {
+    .list-app {
+        position: relative;
+        width: 140px;
+        height: 150px;
+    }
+
+    .list-app img {
+        width: 140px;
+        height: auto;
+    }
+    .list-app .caption {
+        font-size: 20%;
+        color: #fff;
+        padding-top: 30%;
+        padding-left: 30%;
+    }
+
+    .list-app .mask {
+        width: 100%;
+        height: 60%;
+        position: absolute;
+        /*親要素にrelativeがあるのでtop:0,left:0*/
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        -webkit-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+        -webkit-transform: scale(0);
+        /* 大きさを０にして表示しない */
+        transform: scale(0);
+    }
 }
 
-.mv06{
+.list-app {
+    transform: scale(0, 0) rotateY(180deg);
+    -webkit-transform: scale(0, 0) rotateY(180deg);
+}
+
+.mv06 {
     transition: 1.5s;
-	transform: scale(1, 1) rotateY(360deg);
-	-webkit-transform: scale(1, 1) rotateY(360deg);
+    transform: scale(1, 1) rotateY(360deg);
+    -webkit-transform: scale(1, 1) rotateY(360deg);
 }
 
 /*-----終わり：リスト------*/
+
+/*-----モーダル-----------*/
+
+.overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 499;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+.modal {
+    display: none;
+    position: absolute;
+    z-index: 500;
+    top: 10%;
+    left: 20%;
+    border: solid 3px black;
+    width: 530vh;
+    height: 400%;
+    background-color: white;
+}
+
+.modal-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.tasuk-content img {
+    position: absolute;
+    top: 5%;
+    left: 18%;
+    width: 290px;
+}
+
+.title {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+}
+
+.title h2 {
+    font-size: 5em;
+}
+
+.explain {
+    position: absolute;
+    width: 80%;
+    top: 50%;
+    left: 15%;
+    font-size: 1.5em;
+}
+
+.explain span {
+    padding-right: 5%;
+}
+
+.explain p {
+    padding-bottom: 20px;
+}
+
+.comment {
+    position: absolute;
+    top: 76%;
+    left: 14%;
+}
+
+@media (max-width: 736px) {
+    .modal {
+        width: 250%;
+        height: 360%;
+        position: absolute;
+        top: 10%;
+        left: 5%;
+    }
+    .modal-content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    .modal-content img {
+        position: absolute;
+        top: 5%;
+        left: 10%;
+        width: 130px;
+    }
+    .title {
+        position: absolute;
+        top: 5%;
+        left: 50%;
+    }
+
+    .title h2 {
+        font-size: 1.3em;
+    }
+
+    .explain {
+        position: absolute;
+        width: 80%;
+        top: 27%;
+        left: 15%;
+        font-size: 1.5em;
+    }
+
+    .explain span {
+        padding-right: 5%;
+    }
+
+    .explain p {
+        padding-bottom: 20px;
+    }
+
+    .comment {
+        position: absolute;
+        top: 95%;
+        left: 2%;
+    }
+
+
+}
 
 /*---------------------------------終わり：2枚目-左側------------------------------*/
 
@@ -186,31 +431,45 @@ a{
 
 /*---------------------------------3-3枚目-左側------------------------------*/
 
-.twitter{
+.twitter {
     position: absolute;
     top: 25%;
     left: 10%;
 }
 
-.twitter p{
+.twitter p {
     font-size: 5em;
 }
 
 /*---------------------------------終わり：3枚目-左側------------------------------*/
 
-
 /*---------------------------------3-3枚目-右側------------------------------*/
 
-.hatena{
+.hatena {
     position: absolute;
     top: 26%;
     left: 10%;
 }
 
-.hatena p{
+.hatena p {
     font-size: 5em;
 }
 
-.hatena img{
+.hatena img {
     width: 100%
+}
+
+@media (max-width: 736px) {
+    .twitter p{
+        font-size: 2em
+    }
+    .twitter img{
+        width: 120px;
+    }
+    .hatena p{
+        font-size:2em;
+    }
+    .hatena img{
+        width: 120px;
+    }
 }
