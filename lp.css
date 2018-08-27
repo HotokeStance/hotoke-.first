@@ -83,10 +83,11 @@ a {
         text-align: center;
     }
     #header {
-        height: 10vh;
+        height: 8vh;
     }
     #footer {
-        height: 10vh;
+        height: 5vh;
+        font-size: 5px;
     }
 }
 
@@ -319,7 +320,7 @@ a {
     top: 10%;
     left: 20%;
     border: solid 3px black;
-    width: 530vh;
+    width: 530%;
     height: 400%;
     background-color: white;
 }
