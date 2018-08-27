@@ -2,15 +2,15 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>Landing</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
         <link rel="stylesheet" type="text/css" href="jquery.multiscroll.css">
         <link rel="stylesheet" type="text/css" href="lp.css">
     </head>
     
     <body>
-        
         <div id="header"></div>
-        <div id="footer">Thank you for watching</div>
+        <div id="footer">Thank you for whatching</div>
         
         <ul id="menu">
 	       <li data-menuanchor="first"><a href="#first">Profile</a></li>
@@ -28,6 +28,7 @@
                         <p>福岡の専門学生 20卒；</p>
                         <p>勉強のためRuby on RailsでWebアプリなどを作っています；</p>
                         <p>Webサービスやりたいです；</p>
+                        <p>よく「色のセンスが無い」言われます；</p>
                     </div>
                 </div>
                 <div class="ms-section">
@@ -35,13 +36,33 @@
                         <ul>
                             <li class="list-app">
                                 <img src="tasu-k.png">
-                                <div class="mask">
-                                    <a href="https://tasu-k.herokuapp.com/" target="_blank">
-                                        <div class="caption">TASU-K</div>
-                                    </a>
+                                <div class="mask tasuk">
+                                    <div class="caption">TASU-K</div>
                                 </div>
                             </li>
                         </ul>
+                        <!-------------モーダル------------------>
+                        <div class="overlay"></div>
+                        <div class="modal tasuk-modal">
+                            <div class="modal-content tasuk-content">
+                                <img src="tasu-k.png">
+                                <div class="title">
+                                    <h2>TASU-K</h2>
+                                    <p>
+                                        <span>URL</span>
+                                        <a href="https://tasu-k.herokuapp.com/" target="_blank">https://tasu-k.herokuapp.com/</a>
+                                    </p>
+                                </div>
+                                <div class="explain">
+                                    <p><span>サーバー</span>Heroku</p>
+                                    <p><span>制作期間</span>3週間</p>
+                                    <p><span>使用環境</span>ローカル</p>
+                                    <p><span>コメント</span></p>
+                                    <p class="comment">初めて作成した。サーバーにデプロイするのにとても苦労した。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-------------モーダル終わり-------------->
                     </div>
                 </div>
                 <div class="ms-section">
@@ -60,6 +81,7 @@
                     <div class="back1-right-section">
                         <ul>
                             <h2>独学</h2>
+                            <li>Ruby</li>
                             <li>Ruby on Rails</li>
                             <li>HTML/CSS/JS</li>
                         </ul>
@@ -71,7 +93,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="ms-section">Too increase more</div>
+                <div class="ms-section">To increase more</div>
                 <div class="ms-section">
                     <div class="back3-left-section">
                         <div class="hatena">
@@ -104,14 +126,22 @@
         
         $(function() {
 	       $('.list-app').on('inview', function(event, isInView, visiblePartX, visiblePartY) {
-		if(isInView){
-			$(this).stop().addClass('mv06');
-		}
-		else{
-			$(this).stop().removeClass('mv06');
-		}
-	});
-});
+		      if(isInView){
+			     $(this).stop().addClass('mv06');
+		      }
+		      else{
+			     $(this).stop().removeClass('mv06');
+		      }
+	       });
             
+            $('.tasuk').click(function(){
+                $('.tasuk-modal').fadeIn();
+                $('.overlay').fadeIn();
+            });
+            $('.overlay').click(function(){
+               $('.tasuk-modal').fadeOut();
+            $('.overlay').fadeOut();
+            });
+        });          
     </script>
 </html>
