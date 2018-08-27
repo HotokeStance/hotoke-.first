@@ -80,14 +80,16 @@ a {
 @media (max-width: 736px) {
     #header,
     #footer {
+        position: fixed;
         text-align: center;
     }
     #header {
         height: 8vh;
     }
     #footer {
+        padding-top: 2%;
         height: 5vh;
-        font-size: 5px;
+        font-size: 10px;
     }
 }
 
